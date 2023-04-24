@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1 class="contenedor"></h1>
+    <center><h1>Trazo de lineas curvas Bezier</h1></center><br><br>
+    <center><canvas widht="300" height="300" id="lienzo">
+        <script>
+            var elemento=document.getElementById("lienzo");
+            lienzo=elemento.getContext("2d");
+            lienzo.lineWidht=5;
+            lienzo.linecap="round";
+            lienzo.beginPaht();
+            lienzo.moveTo(50,50);
+            lienzo.bezierCurveTo(50,100,150,100,150,50);
+            lienzo.stroke();
+
+        </script>
+    </canvas></center><br><br>
+
+    <center><h1>Trazo de curva B-Spline</h1></center>
+    <center><canvas width="600" height="300" id="lienzo1">
+        <script>
+            var elemento=document.getElementById("lienzo1");
+            lienzo1=elemento.getContext("2d");
+            lienzo1.lineWidht=5;
+            lienzo1.lineCap="round";
+            lienzo1.beginPaht();
+            lienzo1.moveTo(50,50);
+            lienzo1.bezierCurveTo(75,100,125,100,150,50);
+            lienzo1.stroke();
+
+        </script>
+    </canvas>></center>
+</body>
+</html>
